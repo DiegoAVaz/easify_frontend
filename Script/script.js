@@ -1,6 +1,15 @@
 async function buscaDadosFinanceiros(dataInicio, dataFim) {
-  const inicio = dataInicio ? dataInicio : "2024-01-01";
-  const fim = dataFim ? dataFim : new Date().toISOString().split("T")[0];
+  const now = new Date();
+  const primeiroDiaMes = new Date(now.getFullYear(), now.getMonth(), 1)
+    .toISOString()
+    .split("T")[0];
+  const ultimoDiaMes = new Date(now.getFullYear(), now.getMonth() + 1, 0)
+    .toISOString()
+    .split("T")[0];
+
+  const inicio = dataInicio ? dataInicio : primeiroDiaMes;
+  const fim = dataFim ? dataFim : ultimoDiaMes;
+
   try {
     const usuario = buscarDadosUsuario();
     const response = await fetch(

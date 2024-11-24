@@ -44,6 +44,18 @@ function atualizaGrafico({ saldo, totalReceitas, totalDespesas }) {
             padding: 50,
           },
         },
+        title: {
+          display: true,
+          text: "Os valores são referentes ao mês corrente",
+          color: "#fff",
+          font: {
+            size: 16,
+          },
+          padding: {
+            top: 20,
+            bottom: 10,
+          },
+        },
         tooltip: {
           callbacks: {
             label: function (context) {
