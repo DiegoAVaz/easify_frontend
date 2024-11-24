@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "Usuário cadastrado! Indo para Login...";
             setTimeout(() => {
               window.location.href = "./";
-            }, 3000);
+            }, 3000); /*  */
             break;
           case 404:
             document.getElementById("result_alert").style.display = "block";
