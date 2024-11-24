@@ -40,6 +40,12 @@ function trataDadosFinanceiros(data) {
   )}`;
   document.getElementById("saldo").textContent = `R$ ${formatarMoeda(saldo)}`;
 
+  if (saldo < 0) {
+    document.getElementById("saldo").style = "color: red;";
+  } else {
+    document.getElementById("saldo").style = "color: #90ee90;";
+  }
+
   return { saldo, totalReceitas, totalDespesas };
 }
 
