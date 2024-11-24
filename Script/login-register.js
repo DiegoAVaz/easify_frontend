@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const dados = JSON.parse(localStorage.getItem("usuario"));
 
-        window.location.href =
-          "/easyfi_frontend/easy-fi-frontend/Dashboard/dashboard.html";
+        window.location.href = "./Dashboard/dashboard.html";
       } else {
         document.getElementById("result_alert").style.display = "block";
         document.getElementById("result_alert").style.color = "red";
